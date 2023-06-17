@@ -7,7 +7,7 @@ var tároló = [
   'Károly', 'Ricsi'
 ];
 
-function checkName() {
+function keresés() {
   var név = document.getElementById('név').value;
   var válasz = document.getElementById('válasz');
 
