@@ -1,79 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Js vizsga</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Js vizsga</title>
+  <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    <h1>Mikor használandó a JS egy weboldal felépítése során, hogyan használható?</h1>
-    <h3>JS lehetővé teszi a weboldalakhoz interaktív funkciók hozzáadását. Például űrlapok validálása, gombnyomásra történő események kezelése, dinamikus tartalom betöltése.</h3>
-    <h1>Sorold fel, hogyan határozhatunk meg egy értéket és röviden definiáld őket.</h1>
-    <h3>Let,var, const</h3>
-    <h3>A let-kulcsszóval deklarált változók értékét módosíthatjuk</h3>
-    <h3>A var-kulcsszóval deklarált változók a teljes függvény-szintű hatókört átfogják. </h3>
-    <h3>A const-kulcsszóval deklarált változók értéke nem módosítható. </h3>
-    <h1>Ismertesd a literálókat.</h1>
-    <h3>Lehetnek tömb [], objekt {}, Dupla idézőjelek között:"JavaScript", és lehetnek '' között </h3>
-    <h1>Hogyan deklarálhatunk egy változót, és hogyan alkalmazhatóak?</h1>
-    <h3>A változó deklarációja a változónak nevet ad és memóriát foglal a későbbi értékek tárolására. A változónévnek meg kell felelnie bizonyos szabályoknak, például betűvel vagy alulvonással kell kezdődni, és lehet benne betűk, számok és alulvonások.(let, const, var)</h3>
-    <h1>Mikor kell elágazásokat használni? Ismertesd őket (2-3 mondatban).</h1>
-    <h3>Az elágazásokat akkor használjuk, amikor a program futása során bizonyos feltételek teljesülése alapján külön utasításokat végrehajtani vagy kihagyni.</h3>
-    <h3>Létezik az if (igaz vagy hamis), és a switch (amikor egy változó értéke alapján külön-külön különböző kódot hajtanak végre)</h3>
-    <h1>Mikor azok az Objectek? Írj egy példát is.</h1>
-    <h3>Az objektumok olyan adatstruktúrák, amelyek lehetővé teszik az adatokat és a kapcsolódó műveletek összefogását.</h3>
-    <h3>let user = {
-        name: "John",
-        age: 30,
-        isAdmin: true,
-        greet: function() {
-          console.log("Hello!");
-        }
-      };</h3>
-    <h1>Helyes e a következő példa, ha nem miért nem?!pl: let x :  [ { x= fname: “John”, lname: “Doe, age: “34”},[1,2,3,4, “yes”, “no”] ];
-    </h1>
-    <h3>Nem helyes, mert a helyes kód:let x = [
-        { fname: "John", lname: "Doe", age: 34 },
-        [1, 2, 3, 4, "yes", "no"]
-      ];</h3>
-    <h1>Mik azok az Array-ek? Írj egy példát is.</h1>
-    <h3>Array=Tömb</h3>
-    <h3>példa:let fruits = ["alma", "banán", "citrom"];</h3>
-    <h1>Hogyan vizsgálható egy tömb? 2-3 példát írj kérlek.</h1>
-    <h3>Push(), pop(), length(), includes(), stb</h3>
-    <h1>Hogyan mehetünk végig egy tömb/object/lista hosszán? (2-3 mondatban)</h1>
-    <h3>A forciklus használható a tömb vagy objektum hosszára hivatkozva, és iterálhatunk az indexeken vagy a kulcs-érték párokon.</h3>
-    <h1>Sorolj fel néhány events metódus.</h1>
-    <h3>onmouseover, onclick, addEventListener, removeEventListener, </h3>
-    <h1>Miért érdemes függvényeket használni?</h1>
-    <h3>Növeli a kód olvashatóságát és újrafelhasználhatóságát, vissza tudjuk őket hívni, nem kell újra leprogramozni őket.</h3>
-    <h1>Hogyan paraméterezhetünk fel egy függvényt?</h1>
-    <h3>A paramétereket a függvénydefiníciójában határozzuk meg zárójelek között, vesszővel elválasztva.</h3>
-    <h1>Mi az a function visszatérési érték?</h1>
-    <h3>Amikor egy függvényt meghívunk, az elvégzi a műveleteket, és a visszatérési értéket adja vissza az általunk megjelölt helyre (innerHtml, console.log).</h3>
-    <h1>Mikor futtatható egy függvény?</h1>
-    <h3>A függvényeket különböző pontokon hívhatjuk meg a kódunkban, attól függően, hogy mikor kell végrehajtani az adott műveleteket. Egy függvény akkor fut le, amikor a program eléri a hívás helyét.</h3>
-    <h1>Mi az a DOM?</h1>
-    <h3>A DOM (Document Object Model) egy programi interfész, amely lehetővé teszi a weboldalak szerkezetének és tartalmának dinamikus kezelését. A DOM az egész weboldalt egy fastruktúrában reprezentálja, ahol minden elemet (pl. HTML tagek, attribútumok, szöveg) objektumokként kezelünk.</h3>
-    <h1>Mire utasít a következő példa: document.getElementByClassName(“example”).innerText?</h1>
-    <h3>document.getElementByClassName("example"):DOM-lekérdezést hajt végre, amely az összes "example" osztályhoz tartozó elemet választja a dokumentumban.Az a innerText metódus pedig visszaadja az adott elemet.</h3>
-    <h1>Hogyan nyerhető ki egy form input mező értéke és hogyan jeleníted azt meg HTML-ben?</h1>
-    <h3>const inputmező = document.getElementById("inputmező"). Ezzel deklaráltam a kérdéses mezőt (fname, lname, age.....), majd az értékét is kell deklarálni, hogy késpbb fel tudjam használni: const value = inputmező.value;</h3>
-    <h1>Mi az a callback function?</h1>
-    <h3>A callback lehetőségeket nyújt arra, hogy aszinkron módon kezeljük az eseményeket vagy a függvények végrehajtását.</h3>
-    <h1>Definiált: Date();</h1>
-    <h3>Az Date()egy beépített objektum a JavaScriptben, használtunk dátumok és időpontok kezelésére.</h3>
-    <h1>Definiáld: onclick();</h1>
-    <h3>Kattintás eseménykezelő, mellyel egy függvényt hívhatunk meg, amely akar átnavigál egy oldalra (pl).</h3>
-    <h1>Definiáld: function Click(){…};</h1>
-    <h3>Ezzel tudom a function függvényt definiálni, hogy tényleges mit is szeretnék.
-        a function a js függvénye, a Click az id=neve amihez hozzáadtam (pl button) és a 
-        pl:function Click() {
-            console.log("Hellóka!");
-          }
-          ">zárójelben van az amit szeretnék kiiratni</div>
-    </h3>
-    <script src="index.js"></script>
+  <h1>Mikor használandó a JS egy weboldal felépítése során, hogyan használható?</h1><br>
+  <h3>JS lehetővé teszi a weboldalakhoz interaktív funkciók hozzáadását. Például űrlapok validálása, gombnyomásra történő események kezelése, dinamikus tartalom betöltése.</h3>
+  <h1>Sorold fel, hogyan határozhatunk meg egy értéket és röviden definiáld őket.</h1><br>
+  <h3>Let,var, const</h3>
+  <h3>A let-kulcsszóval deklarált változók értékét módosíthatjuk.</h3>
+  <h3>A var-kulcsszóval deklarált változók a teljes függvényre vonatkozik. </h3>
+  <h3>A const-kulcsszóval deklarált változók értéke nem módosítható. </h3>
+  <h1>Ismertesd a literálókat.</h1><br>
+  <h3>Lehetnek tömb [], objekt {}, Dupla idézőjelek között:"JavaScript", és lehetnek '  ' között </h3>
+  <h1>Hogyan deklarálhatunk egy változót, és hogyan alkalmazhatóak?</h1><br>
+  <h3>A változó deklarációja a változónak nevet ad és memóriát foglal a későbbi értékek tárolására. A változónévnek meg kell felelnie bizonyos szabályoknak, például betűvel vagy alulvonással kell kezdődni, és lehet benne betűk, számok és alulvonások.(let, const, var)</h3>
+  <h1>Mikor kell elágazásokat használni? Ismertesd őket (2-3 mondatban).</h1><br>
+  <h3>Az elágazásokat akkor használjuk, amikor a program futása során bizonyos feltételek teljesülése alapján külön utasításokat kell végrehajtani vagy kihagyni.</h3>
+  <h3>Létezik az if (igaz vagy hamis), és a switch (amikor egy változó értéke alapján külön-külön, különböző kódot hajtanak végre)</h3>
+  <h1>Mik azok az Objectek? Írj egy példát is.</h1><br>
+  <h3>Az objektumok olyan adatstruktúrák, amelyek lehetővé teszik az adatokat és a kapcsolódó műveletek összefogását.</h3>
+  <h3>let user = {name: "John",age: 30,isAdmin: true, greet: function() {console.log("Hello!");}}</h3>
+  <h1>Helyes e a következő példa, ha nem miért nem?!pl: let x : [ { x= fname: “John”, lname: “Doe, age: “34”},[1,2,3,4, “yes”, “no”] ];</h1><br>
+  <h3>Nem helyes, mert a helyes kód:let x = [{ fname: "John", lname: "Doe", age: 34 },[1, 2, 3, 4, "yes", "no"]];</h3>
+  <h1>Mik azok az Array-ek? Írj egy példát is.</h1><br>
+  <h3>Array=Tömb</h3>
+  <h3>példa:let fruits = ["alma", "banán", "citrom"];</h3>
+  <h1>Hogyan vizsgálható egy tömb? 2-3 példát írj kérlek.</h1><br>
+  <h3>Push()-hozzáad az utolsó helyre teszi, pop()-utolsó elemet törli, length()-kilistázza hány elem van a tömbben, stb</h3>
+  <h1>Hogyan mehetünk végig egy tömb/object/lista hosszán? (2-3 mondatban)</h1><br>
+  <h3>A forciklus használható a tömb vagy objektum hosszára hivatkozva, és iterálhatunk az indexeken vagy a kulcs-érték párokon.</h3>
+  <h1>Sorolj fel néhány events metódus.</h1><br>
+  <h3>onmouseover, onclick, addEventListener, removeEventListener, </h3>
+  <h1>Miért érdemes függvényeket használni?</h1><br>
+  <h3>Növeli a kód olvashatóságát és újrafelhasználhatóságát, vissza tudjuk őket hívni, nem kell újra leprogramozni őket.</h3>
+  <h1>Hogyan paraméterezhetünk fel egy függvényt?</h1><br>
+  <h3>A paramétereket a függvénydefiníciójában határozzuk meg zárójelek között, vesszővel elválasztva.</h3>
+  <h1>Mi az a function visszatérési érték?</h1><br>
+  <h3>Amikor egy függvényt meghívunk, az elvégzi a műveleteket, és a visszatérési értéket adja vissza az általunk megjelölt helyre (innerHtml, console.log).</h3>
+  <h1>Mikor futtatható egy függvény?</h1><br>
+  <h3>A függvényeket különböző pontokon hívhatjuk meg a kódunkban, attól függően, hogy mikor kell végrehajtani az adott műveleteket. Egy függvény akkor fut le, amikor a program beolvasása eléri a függvény helyét.(fentről lefelé ás balról jobbra olvasva)</h3>
+  <h1>Mi az a DOM?</h1><br>
+  <h3>A DOM (Document Object Model) egy programi interfész, amely lehetővé teszi a weboldalak szerkezetének és tartalmának dinamikus kezelését. A DOM az egész weboldalt egy fastruktúrában reprezentálja, ahol minden elemet (pl. HTML tagek, attribútumok, szöveg) objektumokként kezelünk.</h3>
+  <h1>Mire utasít a következő példa: document.getElementByClassName(“example”).innerText?</h1><br>
+  <h3>document.getElementByClassName("example"):DOM-lekérdezést hajt végre, amely az összes "example" osztályhoz tartozó elemet választja a dokumentumban.Az a innerText metódus pedig visszaadja az adott elemet.</h3>
+  <h1>Hogyan nyerhető ki egy form input mező értéke és hogyan jeleníted azt meg HTML-ben?</h1><br>
+  <h3>const inputmező = document.getElementById("inputmező"). Ezzel deklaráltam a kérdéses mezőt (fname, lname, age, stb), majd az értékét is kell deklarálni, hogy késpbb fel tudjam használni: const value = inputmező.value;</h3>
+  <h1>Mi az a callback function?</h1><br>
+  <h3>A callback lehetőségeket nyújt arra, hogy aszinkron módon kezeljük az eseményeket vagy a függvények végrehajtását.</h3>
+  <h1>Definiáld: Date();</h1><br>
+  <h3>Az Date()egy beépített objektum a JavaScriptben, használtunk dátumok és időpontok kezelésére, lekérdezésére.</h3>
+  <h1>Definiáld: onclick();</h1><br>
+  <h3>Kattintás eseménykezelő, mellyel egy függvényt hívhatunk meg, amely például átnavigál egy oldalra.</h3>
+  <h1>Definiáld: function Click(){…};</h1><br>
+  <h3>Ezzel tudom a function függvényt definiálni, hogy tényleges mit is szeretnék. A function a js függvénye, a Click az id=neve amihez hozzáadtam (pl button) és a pl:function Click() {console.log("Hellóka!");}</h3><br><br><br>
+  <h1 class="gyakorlati">Gyakorlati vizsga-első feladat</h1><br><br><br><br><br>
+  <h3>Ha kíváncsi vagy arra, hogy szerepelsz-e az adatbázisomban, írd be a neved!</h3>
+  <label for="név">Név:</label>
+  <input type="text" id="név">
+  <button onclick="checkName()">Ellenőrzés</button>
+  <p id="válasz"></p>
+  <h1 class="gyakorlati">Második feladat</h1><br><br><br><br><br>
+  <label for="szám">Szám:</label>
+  <input type="number" id="szám">
+  <button onclick="számolás()">Keresés</button>
+  <p id="válasz2"></p>
+  <script src="index.js"></script>
 </body>
+
 </html>
